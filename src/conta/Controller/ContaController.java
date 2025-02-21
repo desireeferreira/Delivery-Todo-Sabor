@@ -6,14 +6,15 @@ import java.util.Scanner;
 import conta.Model.ItemCardapio;
 
 public class ContaController {
-	private static List<ItemCardapio> cardapio = new ArrayList<>();
-	private static Scanner leia = new Scanner(System.in);
-	public static void cadastrarItem() {
+    private static List<ItemCardapio> cardapio = new ArrayList<>();
+    private static Scanner leia = new Scanner(System.in);
+
+    public static void cadastrarItem() {
         System.out.print("\nDigite o nome do novo item: ");
         String nome = leia.nextLine();
 
         System.out.print("Digite o preço do item: ");
-        double preco = leia.nextDouble();
+        float preco = leia.nextFloat();
         leia.nextLine();  
 
         cardapio.add(new ItemCardapio(nome, preco));
@@ -32,12 +33,7 @@ public class ContaController {
         }
     }
 
-	
-    
-    public static void atualizarItem() {
-        //consultarCardapio();
-        if (cardapio.isEmpty()) return;
-
+    public static void atualizarItem() { 
         System.out.print("\nDigite o nome do item que deseja atualizar: ");
         String nome = leia.nextLine();
 
@@ -47,24 +43,25 @@ public class ContaController {
             String novoNome = leia.nextLine();
 
             System.out.print("Novo preço do item: ");
-            double novoPreco = leia.nextDouble();
+            float novoPreco = leia.nextFloat();
             leia.nextLine();  
 
-           item.setNome(novoNome);
+            item.setNome(novoNome);
             item.setPreco(novoPreco);
 
             System.out.println("Item atualizado com sucesso!");
         } else {
             System.out.println("Item não encontrado!");
-       }
+        }
     }
 
-    
-	public static void apagarItem() {
-       //consultarCardapio();
-        if (cardapio.isEmpty()) return;
+    public static void apagarItem() {
+        if (cardapio.isEmpty()) {
+            System.out.println("\nO cardápio está vazio.");
+            return;
+        }
 
-       System.out.print("\nDigite o nome do item que deseja apagar: ");
+        System.out.print("\nDigite o nome do item que deseja apagar: ");
         String nome = leia.nextLine();
 
         ItemCardapio item = encontrarItemPorNome(nome);
@@ -83,9 +80,5 @@ public class ContaController {
             }
         }
         return null; 
-    }}
-
-
-	
-		
-	
+    }
+}

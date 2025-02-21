@@ -1,5 +1,6 @@
 package conta;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import conta.Controller.ContaController;
 
@@ -21,10 +22,26 @@ public class Menu {
             System.out.println("            5 - Finalizar o Pedido                   ");
             System.out.println("*****************************************************");
             System.out.print  ("Entre com a opção desejada:                          ");
-            
-            opcao = leia.nextInt();
-            leia.nextLine();  
+            // try serve para vê o que está certo /cath diz se esta certo ou errado e o fofoqueiro
+            try {
+                opcao = leia.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("\nOpah.... parace que você digitou errado! Escolha um número do cardápio!");
+                leia.nextLine();
+                opcao = 0;
+            }
 
+            if (opcao == 5) {
+                System.out.println("\nObrigada por escolher Todo Sabor Comida Brasileira!");
+                leia.close();
+                System.exit(0);
+            }
+            
+           // opcao = leia.nextInt();
+           // leia.nextLine();  
+            //switch= tenho a possiblidade de alternativa
+            //case= avalia as situações
+            // \n signica que quebra a linha caso eu coloco no meio de uma palavra ou no inicio
             switch (opcao) {
             case 1:
                 ContaController.consultarCardapio();
@@ -48,3 +65,5 @@ public class Menu {
     }
 }
 }
+
+            

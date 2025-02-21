@@ -6,9 +6,9 @@ package conta.Model;
 //    protected double preco;
 public class ItemCardapio {
 private String nome;
-private double preco;
+private float preco;
 
-    public  ItemCardapio(String nome, double preco) {
+    public  ItemCardapio(String nome, float preco) {
         this.nome = nome;
         this.preco = preco;
     }
@@ -21,16 +21,16 @@ private double preco;
         this.nome = nome;
     }
 
-    public double getPreco() {
+    public float getPreco() {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public void setPreco(float preco) {
         this.preco = preco;
     }
 
-    @Override
-    public String toString() {
-        return nome + " - R$ " + preco;
-    }
+//    @Override
+//    public String toString() {
+//        return nome + " - R$ " + preco;
+//    }
 }

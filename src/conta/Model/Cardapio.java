@@ -28,21 +28,21 @@ abstract class Cardapio implements ContaRepository {
                 System.out.println(item);
             }
             
-        }
+        }}}
     
-	}
+	
     
-	public void cadastrarItem(ItemCardapio item ) {
-                            
-     try {
-            cardapio.add(item);
-            System.out.println("Item cadastrado com sucesso!");
-            
-        } catch (Exception e) {
-            System.out.println("Erro ao cadastrar item: " + e.getMessage());
-        }
-     }
-	}
+//	public void cadastrarItem(ItemCardapio item ) {
+//                            
+//     try {
+//            cardapio.add(item);
+//            System.out.println("Item cadastrado com sucesso!");
+//            
+//        } catch (Exception e) {
+//            System.out.println("Erro ao cadastrar item: " + e.getMessage());
+//        }
+//     }
+//	}
 	
     
     

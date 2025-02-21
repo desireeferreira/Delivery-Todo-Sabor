@@ -1,6 +1,6 @@
 package repository;
 
-import conta.Model.*;
+import conta.Model.ItemCardapio;
 
 public interface ContaRepository {
 

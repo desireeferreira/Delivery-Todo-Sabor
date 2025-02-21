@@ -3,7 +3,7 @@ import conta.Model.ItemCardapio;
 
 
 public class Comida extends ItemCardapio {
-    public Comida(String nome, double preco) {
+    public Comida(String nome, float preco) {
         super(nome, preco);
     }
 }
