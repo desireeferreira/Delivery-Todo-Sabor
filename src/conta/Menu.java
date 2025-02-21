@@ -1,6 +1,7 @@
 package conta;
 
 import java.util.Scanner;
+import conta.Controller.ContaController;
 
 public class Menu {
 
@@ -25,28 +26,25 @@ public class Menu {
             leia.nextLine();  
 
             switch (opcao) {
-                case 1:
-                    
-                    break;
-                case 2:
-                    cadastrarItem();
-                    break;
-                case 3:
-                    atualizarItem();
-                    break;
-                case 4:
-                    apagarItem();
-                    break;
-                case 5:
-                    System.out.println("\nObrigada por Escolher Todo Sabor Comida Brasileira");
-                    leia.close();
-                    return;
-                default:
-                    System.out.println("\nOpção inválida");
-            }
+            case 1:
+                ContaController.consultarCardapio();
+                break;
+            case 2:
+                ContaController.cadastrarItem();
+                break;
+            case 3:
+                ContaController.atualizarItem();
+                break;
+            case 4:
+                ContaController.apagarItem();
+                break;
+            case 5:
+                System.out.println("\nObrigada por Escolher Todo Sabor Comida Brasileira");
+                leia.close();
+                return;
+            default:
+                System.out.println("\nOpção inválida");
         }
     }
-
-     // Retorna null caso o item não seja encontrado
-    }
+}
 }
