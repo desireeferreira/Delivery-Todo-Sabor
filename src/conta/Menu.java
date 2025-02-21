@@ -1,7 +1,5 @@
 package conta;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
@@ -11,7 +9,7 @@ public class Menu {
 
         int opcao;
 
-        while (true) {
+        while (true) { 
             System.out.println("*****************************************************");
             System.out.println("          MENU TODO SABOR COMIDA BRASILEIRA          ");
             System.out.println("*****************************************************");
@@ -24,11 +22,11 @@ public class Menu {
             System.out.print  ("Entre com a opção desejada:                          ");
             
             opcao = leia.nextInt();
-            leia.nextLine();  // Consumir a quebra de linha
+            leia.nextLine();  
 
             switch (opcao) {
                 case 1:
-                    consultarCardapio();
+                    
                     break;
                 case 2:
                     cadastrarItem();
