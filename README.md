@@ -16,7 +16,6 @@
 - 🛒 **Adicionar ao Carrinho**: O cliente pode adicionar pratos e bebidas ao seu carrinho de compras.
 - 🧾 **Finalizar Pedido**: O cliente pode revisar seu pedido e finalizar com informações de pagamento e entrega.
 - 📦 **Gestão de Pedidos**: O sistema permite a visualização e o gerenciamento dos pedidos realizados, tanto pelo cliente quanto pelo administrador.
-- 🔐 **Autenticação de Usuários**: Login e registro de clientes, com segurança utilizando **Spring Security**.
 
 ### Passos para execução
 
